@@ -4,7 +4,7 @@ use warnings;
  
 use Exporter qw(import);
  
-our @EXPORT_OK = qw(coordValid getDirOffsetCoord getNeighbors wrapCoord);
+our @EXPORT_OK = qw(coordValid getDirOffsetCoord getNeighbors getOrthoNeighbors wrapCoord);
 
 # coordValid(\@coord, \@array);
 sub coordValid {
@@ -52,6 +52,11 @@ sub getDirOffsetCoord {
 }
 
 sub getNeighbors {
+    my ($row, $col) = @_;
+    return [$row-1, $col-1], [$row-1, $col], [$row-1, $col+1], [$row, $col-1], [$row, $col+1], [$row+1, $col-1], [$row+1, $col], [$row+1, $col+1];
+}
+
+sub getOrthoNeighbors {
     my ($row, $col) = @_;
     return [$row-1, $col], [$row, $col-1], [$row, $col+1], [$row+1, $col];
 }
