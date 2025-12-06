@@ -21,22 +21,6 @@ while (<>) {
 	}
 }
 
-#foreach my $r (0 .. $#input) {
-#	foreach my $c (0 .. $#{$input[$r]}) {
-#		print $input[$r][$c];
-#	}
-#	print "\n";
-#}
-
-#my $test = "    ";
-#if ($test =~ /^ *$/) {
-#	print "only spaces\n";
-#}
-#else {
-#	my $int = int $test;
-#	print "test int: $int\n";
-#}
-
 my $ans = 0;
 my $op;
 my $getOp = 0;
