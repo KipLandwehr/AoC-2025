@@ -78,23 +78,5 @@ CONN: while (@sortedDists) {
 	}
 }
 
-#my %circuits;
-#foreach my $k (sort keys %nodes) {
-#	# key on cID, count number of nodes for the cID
-#	$circuits{$nodes{$k}}++;
-#}
-#
-#my @cirLens;
-#foreach my $cir (sort keys %circuits) {
-#	push @cirLens, $circuits{$cir};
-#}
-#
-#my @sortedCirLens = reverse sort { $a <=> $b } @cirLens;
-#
-#$total = shift @sortedCirLens;
-#foreach (1..2) {
-#	$total *= (shift @sortedCirLens);
-#}
-
 # Print solution
 print "Solution: $total\n";
